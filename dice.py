@@ -111,7 +111,7 @@ def chat(chanel):
         buf = command[command.index('!dice ')]
         buf += str(bet)
         # print(buf)
-        for i in range(100):
+        for i in range(200):
             msg = {
                 "content": buf,
                 "nonce": "82329451214{}33232234".format(random.randrange(0, 1000)),
