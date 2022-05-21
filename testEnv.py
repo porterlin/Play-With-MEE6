@@ -10,5 +10,22 @@ env.read_env()
 # print(serverIP)
 # print(type(a))
 # print(a)
-test = env.str('TOKEN')
-print(test)
+# test = env.str('TOKEN')
+# print(test)
+
+# with open('result.txt', 'w+') as f:
+#     temp = f.readlines()
+
+# cmp = ' = '
+# for item in temp:
+#     buf = ''
+#     start = item.index(cmp) + 3
+#     end = item.index('\n')
+#     for i in range(start, end):
+#         buf += item[i]
+#     print(buf)
+a = 0
+for i in range(100):
+    a += 1
+
+print(a)

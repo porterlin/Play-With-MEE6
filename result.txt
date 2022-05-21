@@ -1,0 +1,6 @@
+times = 200
+win = 66
+lose = 89
+eaual = 28
+winDouble = 13
+winTriple = 4

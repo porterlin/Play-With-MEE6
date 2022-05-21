@@ -7,7 +7,7 @@ from environs import Env
 env = Env()
 env.read_env()
 
-chanel = env.list("TEST")
+chanel = env.list("GAMBLE")
 authorization = env.str("AUTHORIZATION")
 money = 0
 header = {
