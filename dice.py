@@ -105,8 +105,6 @@ def chat(chanel):
     for chanel_id in chanel:
         getMoney(chanel_id)
         bet = money // 50
-        if bet > 5000:
-            bet = 5000
         print('bet: ', bet)
         buf = command[command.index('!dice ')]
         buf += str(bet)
