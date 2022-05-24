@@ -4,6 +4,14 @@ import json
 import time
 import random
 from environs import Env
+import argparse
+
+parser = argparse.ArgumentParser(epilog="if you don't use -b and -d. The bet will be money divide by 50")
+parser.add_argument("-t", "--times", type=int, default=200, help="how many times to play dice (default = 200)")
+group = parser.add_mutually_exclusive_group()
+group.add_argument("-b", "--bet", type=int, help="how much money do you want to bet")
+group.add_argument("-d", "--divide", type=int, help="Your bet will be money divide by number")
+args = parser.parse_args()
 
 env = Env()
 env.read_env()
@@ -20,6 +28,8 @@ header = {
     "Content-Type": "application/json",
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36",
 }
+
+number = args.times
 
 # data
 times = 0
@@ -69,13 +79,6 @@ def getMoney(chanel_id):
     #print(buf)
     print('money: ', money)
 
-def content():
-    # localtime = time.localtime(time.time())
-    # content = "現在時間為: {}:{}:{}".format(localtime.tm_hour, localtime.tm_min, localtime.tm_sec)
-    content = "!work"
-
-    return content
-
 def statistics(chanel_id):
     global times, win, lose, equal, winDouble, winTriple
     discord_url = "https://discord.com/api/v9/channels/{}/messages?limit=100".format(chanel_id)
@@ -104,12 +107,19 @@ def chat(chanel):
     global times
     for chanel_id in chanel:
         getMoney(chanel_id)
-        bet = money // 50
+        
+        if (args.bet == None) and (args.divide == None):
+            bet = money // 50
+        elif args.bet == None:
+            bet = money // args.divide
+        elif args.divide == None:
+            bet = args.bet
+        
         print('bet: ', bet)
         buf = command[command.index('!dice ')]
         buf += str(bet)
         # print(buf)
-        for i in range(200):
+        for i in range(number):
             msg = {
                 "content": buf,
                 "nonce": "82329451214{}33232234".format(random.randrange(0, 1000)),
@@ -124,8 +134,6 @@ def chat(chanel):
                 pass
             time.sleep(random.randrange(10, 15))
             statistics(chanel_id)
-        
-    # time.sleep(random.randrange(60, 180))
 
 def readData():
     global times, win, lose, equal, winDouble, winTriple
