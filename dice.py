@@ -21,7 +21,6 @@ person_Id = env.str("PERSON_ID")
 token = env.str("TOKEN")
 name = env.str("NAME")
 
-command = ['!work', '!coins', '!dice ']
 money = 0
 header = {
     "Authorization": authorization,
@@ -35,7 +34,7 @@ datas = [0] * 6 # [ times, win, lose, equal, winDouble, winTriple ]
 
 def getMoney(chanel_id):
     msg = {
-        "content": command[command.index('!coins')],
+        "content": "!coins",
         "nonce": "82329451214{}33232234".format(random.randrange(0, 1000)),
         "tts": False,
     }
@@ -105,7 +104,7 @@ def chat(chanel):
             bet = args.bet
         
         print('bet: ', bet)
-        buf = command[command.index('!dice ')]
+        buf = '!dice '
         buf += str(bet)
         for i in range(number):
             msg = {
