@@ -13,7 +13,7 @@
 * `.env` 檔中輸入相關資訊
   * `GAMBLE` 玩骰子時發送訊息的頻道 ID，多個頻道用逗號隔開
   * `WORK` 工作時發送訊息的頻道 ID，多個頻道用逗號隔開
-  * `Daily` 每日簽到發送訊息的頻道 ID，多個頻道用逗號隔開
+  * `DAILY` 每日簽到發送訊息的頻道 ID，多個頻道用逗號隔開
   * `NAME` Discord 使用者名稱
   * `TOKEN` 伺服器的貨幣，預設為:coin:
   * `PERSON_ID` Discord 使用者的 ID
