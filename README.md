@@ -32,7 +32,7 @@ python daily.py -t h:m:s
 ```python
 python work.py -d h
 ```
-一小時工作一次，工作 h 小時
+一小時工作一次，工作 h 小時<br>
 沒給 `-d` 參數預設為一直工作下去
 ## 骰子遊戲
 ```python
