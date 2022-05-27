@@ -1,9 +1,8 @@
 # Play-With-MEE6
 
 <img src="https://static.wikia.nocookie.net/discord/images/e/e6/Mee6.png/revision/latest?cb=20201028153812" width = "150" height = "150" alt="图片名称" align=center />
-<br></br>
 
-本專案可自動發訊息與 Discord 機器人 MEE6 遊玩
+本專案可自動發訊息與 Discord 機器人 MEE6 遊玩<br>
 目前功能有
 1. 每日簽到
 2. 工作
@@ -18,7 +17,7 @@
   * `NAME` Discord 使用者名稱
   * `TOKEN` 伺服器的貨幣，預設為:coin:
   * `PERSON_ID` Discord 使用者的 ID
-  * `AUTHORIZATION` 授權碼，不可外流!!!
+  * `AUTHORIZATION` 授權碼，不可外流!!!<br>
     用瀏覽器開 discord，然後打開開發人員選項找到 network
     隨便發一條訊息後會看到 network 下面出現 messages
     在 messages 的 headers 中可以找到
