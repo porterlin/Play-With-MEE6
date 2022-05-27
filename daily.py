@@ -7,7 +7,7 @@ import argparse
 from datetime import datetime
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-t", "--time", type=lambda d: datetime.strptime(d, '%H:%M:%S'), help="What time do you want to receive your daily reward (format: H:M:S)")
+parser.add_argument("-t", "--time", required=True, type=lambda d: datetime.strptime(d, '%H:%M:%S'), help="What time do you want to receive your daily reward (format: H:M:S)")
 args = parser.parse_args()
 
 env = Env()
