@@ -24,8 +24,10 @@ env.read_env()
 #     for i in range(start, end):
 #         buf += item[i]
 #     print(buf)
-a = 0
-for i in range(100):
-    a += 1
+# a = 0
+# for i in range(100):
+#     a += 1
 
+# print(a)
+a = []*5
 print(a)
