@@ -1,4 +1,4 @@
-# Play-with-MEE6
+# Play-With-MEE6
 
 <img src="https://static.wikia.nocookie.net/discord/images/e/e6/Mee6.png/revision/latest?cb=20201028153812" width = "150" height = "150" alt="图片名称" align=center />
 <br></br>
