@@ -14,7 +14,6 @@ args = parser.parse_args()
 
 env = Env()
 env.read_env()
-
 chanel = env.list("GAMBLE")
 authorization = env.str("AUTHORIZATION")
 person_Id = env.str("PERSON_ID")
