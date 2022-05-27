@@ -18,8 +18,8 @@
   * `TOKEN` 伺服器的貨幣，預設為:coin:
   * `PERSON_ID` Discord 使用者的 ID
   * `AUTHORIZATION` 授權碼，不可外流!!!<br>
-    用瀏覽器開 discord，然後打開開發人員選項找到 network
-    隨便發一條訊息後會看到 network 下面出現 messages
+    用瀏覽器開 discord，然後打開開發人員選項找到 network<br>
+    隨便發一條訊息後會看到 network 下面出現 messages<br>
     在 messages 的 headers 中可以找到
 * 頻道 ID 在要發訊息的頻道按右鍵有複製 ID 選項
 * 使用者 ID 在伺服器右側找到自己的名字，按右鍵一樣可以複製
